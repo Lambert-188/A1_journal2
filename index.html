@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A2|SICHUAN CUISINE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="intro" id="web-intro">
+    <header>
+		 <h1 class="heading">
+      <a href="https://lambert-188.github.io/A1/">
+        <span>Lambert's Hompage</span>
+        <sup>Welcome ♥</sup>
+        <img alt="Lambert's Homepage" class="logo" src="lambert_logo.jpg">
+      </a>
+     </h1>
+
+     <ul class="header-list">
+      <li class="header-item">
+        <a href="https://lambert-188.github.io/A1/">HOME</a>
+      </li>
+      <li class="header-item">
+        <a href="#">JOURNAL 2</a>
+      </li>
+      <li class="header-item">
+        <a href="https://hkdesign.org/user-account/settings/">ABOUT</a>
+      </li>
+     </ul>
+      
+		</header>
+	</section>
+  
+  <aside>
+    <ul class="navigation-list">
+      <h5 class="navigation-item">
+        <a href="https://lambert-188.github.io/A1/">♥ Assignment 1</a>
+    </h5>
+      <h5 class="navigation-item">
+        <a href="#">♥ Assignment 2</a>
+      </h5>
+      <h5 class="navigation-item">
+        <a href="#">♥ Assignment 3</a>
+      </h5>
+      <h5 class="navigation-item">
+        <a href="#">♥ Assignment 4</a>
+      </h5>
+      <h5 class="navigation-item">
+        <a href="#">♥ Assignment 5</a>
+      </h5>
+    </ul>
+  </aside>
+
+  <main>
+    <h1>SICHUAN CUISINE in HK ISLAND</h1>
+
+    <p>In this assignment, ParseHub was used to help get the data from openrice website. According to my food preference, I chose to scrape the information about Suichuan cuisine restaurant from Hong Kong Island, including restaurant name, address, price range, number of likes, number of dislikes, discounts, and signature dishes, about 13 pages and 204 rows.</p>
+
+    <p>Moreover, Open Refined was used to clean the data. Firstly, I removed the restaurants which were displayed “being decorated”, “moved away” or “delivery only”. Second, I removed restaurants with neither “number of likes” nor “number of dislikes”. Finally, I changed the prince range “under 50” to “000-050”, and “51-100” to “051-100” for ordering by price ascending in SQL. </p>
+
+    <p id="sql">
+
+      Once the data was imported into the table, I designed 4 SQL command to sort the data based on my habits to choose restaurant. The first is to select 10 restaurants with best reputation (according to the number of likes).
+
+    </p>
+      <img class="j2" src="best-reputation.png">
+
+    <p id="sql">
+
+      And then I selected 10 cheapest restaurants used “order by avg_price ASC”. 
+
+    </p>
+      <img class="j2" src="cheapest.png">
+
+    <p id="sql">
+
+      Thirdly, I used “WHERE discounts NOTNULL” and “order by like DESC” to select 5 restaurants having discounts activities with good reputation. 
+
+    </p>
+      <img class="j2" src="suancaiyu.png">
+
+    <p id="sql">
+
+      At the end, I selected 5 restaurants whose signature dishes are “酸菜鱼”, ordered by number of likes descending. Furthermore, I used Python codes combined with SQL queries to present the result in a Pandas data frame.
+
+    </p>
+      <img class="j2" src="discounts.png">
+
+  </main>
+
+  <footer>
+    <div class="footer">
+    <ul class="footer-list">
+      <li class="footer-item">
+        <a href="https://github.com/Lambert-188">GITHUB</a>
+      </li>
+      <li class="footer-item">
+        <a href="#">CONTACT</a>
+      </li>
+    </ul>
+  </div>
+  </footer>
+</body>
+
+</html>
